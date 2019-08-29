@@ -12,7 +12,7 @@ export class SearchRequestService {
   searchClass:SearchClass;
 
   constructor(private http:HttpClient){
-this.searchClass = new SearchClass("","","","","")
+this.searchClass = new SearchClass("","","","","","","")
   } 
   searchRequest(){
     interface ApiResponse{
@@ -20,7 +20,9 @@ this.searchClass = new SearchClass("","","","","")
       public_repos:any;
       avatar_url:any;
       name:string;
-      html_url:any;      
+      html_url:any;  
+      following:any;
+      followers:any;    
 
     }
     let promise = new Promise((resolve,reject)=>{
@@ -30,6 +32,8 @@ this.searchClass = new SearchClass("","","","","")
         this.searchClass.avatar_url = response.avatar_url
         this.searchClass.name = response.name
         this.searchClass.html_url = response.html_url
+        this.searchClass.following = response.following 
+         this.searchClass.followers = response.followers
         resolve()
       }),
       error=>{
@@ -38,6 +42,8 @@ this.searchClass = new SearchClass("","","","","")
         this.searchClass.avatar_url= 'profile is not showing up'
         this.searchClass.name= 'you did not have a github name'
         this.searchClass.html_url= 'dont you have a github link?'
+        this.searchClass.following= 'how many are following you?'
+        this.searchClass.followers= 'how many you are following?'
         reject(error)
   }
  

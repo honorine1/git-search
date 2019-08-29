@@ -1,9 +1,11 @@
 <!-- <p>profile works!</p> -->
 
 <ul>
-    <li><img src="{{searchClass.avatar_url}}" > </li>
-    <li>{{searchClass.login}}</li>
-    <li>{{searchClass.public_repos}}</li>
-    <li>{{searchClass.name}}</li>
-    <li><a href="{{searchClass.html_url}}">repositories</a></li>
+    <li><h5>your github profile</h5><img src="{{searchClass.avatar_url}}" > </li>
+    <li><h5>your github username:</h5>{{searchClass.login}}</li>
+    <li><h5>number of your repositories:</h5>{{searchClass.public_repos}}</li>
+    <li><h5>your github name:</h5>{{searchClass.name}}</li>
+    <li><h5>link to your repo:</h5><a href="{{searchClass.html_url}}">repositories</a></li>
+    <li><h5>following:</h5>{{searchClass.following}}</li>
+    <li><h5>followers</h5>{{searchClass.followers}}</li>
 </ul>
