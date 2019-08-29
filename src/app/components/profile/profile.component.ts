@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { SearchRequestService } from '../../search-http/search-request.service';
+import { SearchClass } from 'src/app/search-class';
+
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+ 
+  searchClass:SearchClass;
+  constructor(private searchService:SearchRequestService) { }
 
   ngOnInit() {
+    this.searchService.searchRequest();
+    this.searchClass = this.searchService.searchClass;
+    
   }
 
 }
