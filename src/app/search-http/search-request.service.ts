@@ -10,6 +10,7 @@ import { SearchClass } from '../search-class';
 export class SearchRequestService {
 
   searchClass:SearchClass;
+  // login:any;
 
   constructor(private http:HttpClient){
 this.searchClass = new SearchClass("","","","","","","")
@@ -51,4 +52,8 @@ this.searchClass = new SearchClass("","","","","","","")
   })
   return promise;
   }
+
+  // updateSearch(login:any){
+  //   this.login=login
+  // }
 }

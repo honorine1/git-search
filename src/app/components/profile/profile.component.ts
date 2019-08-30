@@ -13,8 +13,21 @@ import { SearchClass } from 'src/app/search-class';
 export class ProfileComponent implements OnInit {
  
   searchClass:SearchClass;
-  constructor(private searchService:SearchRequestService) { }
+  login:any;
 
+  constructor(private searchService:SearchRequestService) { 
+    // findProfile() {
+    //   this.searchClass.updateProfile(this.login);
+    //   this.searchClass.getProfileInfo().subscribe(profile => {
+    //     console.log(profile);
+    //     this.profile = profile;
+    //   });
+  }
+  // findProfile(){
+  //    this.searchService.updateSearch(this.login)
+  // }
+
+ 
   ngOnInit() {
     this.searchService.searchRequest();
     this.searchClass = this.searchService.searchClass;

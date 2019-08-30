@@ -1,11 +1,25 @@
-<!-- <p>profile works!</p> -->
-
-<ul>
+<div class="container">
+    <div class="header">
+        <div class="navbar panel"><input type="text" name="login"><button>search</button></div>
+    </div>
+</div>
+    
+<ul >
     <li><h5>your github profile</h5><img src="{{searchClass.avatar_url}}" > </li>
-    <li><h5>your github username:</h5>{{searchClass.login}}</li>
+    <li ><h5>your github username:</h5>{{searchClass.login}}</li>
     <li><h5>number of your repositories:</h5>{{searchClass.public_repos}}</li>
     <li><h5>your github name:</h5>{{searchClass.name}}</li>
     <li><h5>link to your repo:</h5><a href="{{searchClass.html_url}}">repositories</a></li>
     <li><h5>following:</h5>{{searchClass.following}}</li>
     <li><h5>followers</h5>{{searchClass.followers}}</li>
 </ul>
+<!-- <li><form action="">
+        <div class="form-group">
+            <input type="text" style="margin-top: 7%;  width: 130%; height: 15%;
+            background-color: rgb(70, 68, 68); border: none; color: ghostwhite;" 
+            class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus  "
+             placeholder="search or jump to" [(ngModel)]="login" name="login"  
+             (keyup.Enter)="findProfile()">
+            </div>
+        </form>
+    </li> -->

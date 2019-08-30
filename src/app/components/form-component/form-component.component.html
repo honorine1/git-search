@@ -1,3 +1,8 @@
 <p>Please enter your github username</p>
-<input type="text" name="text"id="username">
-<button id="submit" onClick="getData(true)">search</button>
+
+<div class="form-group" >
+    <input type="text" class="form-control" placeholder="search git users with username" name="text"id="username" [(ngModel)="login"] (keyup)="findProfile" >
+    <!-- <button id="submit" >search</button>  -->
+</form>
+
+
