@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'search',component:FormComponentComponent},
   {path:'profile',component:ProfileComponent},
   {path:'repos/:profile',component:ProfileComponent},
-  {path:'',redirectTo:"/search",pathMatch:"full"}
+  {path:'',redirectTo:"search",pathMatch:"full"}
 
 ];
 
