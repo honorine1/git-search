@@ -1,13 +1,18 @@
 
    <div class="container">
        <div class="row">
-           
+           <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <img src="{{users.avatar_url}}"id="imge"  >
+        </div> 
+          <div class="col-md-4"></div>
+          
        </div>
    </div> 
 <ul >
-    <li><h5>your github profile</h5><img src="{{users.avatar_url}}" > </li>
+    <!-- <li><h5>your github profile</h5><img src="{{users.avatar_url}}" > </li> -->
     <li ><h5>your github username:</h5>{{users.login}}</li>
-    <li><h5>number of your repositories:</h5>{{users.public_repos}}</li>
+    <li><h5>number of your repositories:</h5>{{users.public_repos}}</li> 
     <li><h5>your github name:</h5>{{users.name}}</li>
     <li><h5>link to your repo:</h5><a href="{{users.html_url}}">repositories</a></li>
     <li><h5>following:</h5>{{users.following}}</li>
@@ -15,12 +20,12 @@
     <li><h5>created at:{{users.created_at|date}}</h5></li>
 </ul>
 
-<!-- <div *ngFor=  "let repo of searchService.reposs">
+<div *ngFor="let repo of repos">
     <p>{{repo.name}}</p>
     <p>{{repo.html_url}}</p>
     <p>{{repo.description}}</p>
     
-</div> -->
+</div>
 <!-- <li><form action="">
         <div class="form-group">
             <input type="text" style="margin-top: 7%;  width: 130%; height: 15%;

@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
  
   // searchClass:SearchClass;
   users:User;
-  repos:Repo;
+  repos:Repo[];
   // login:any;
 
   constructor(private searchService:SearchRequestService,private activatedRoute:ActivatedRoute) { 

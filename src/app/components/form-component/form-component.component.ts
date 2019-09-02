@@ -12,7 +12,7 @@ import { Repo } from 'src/app/repo';
 })
 export class FormComponentComponent implements OnInit {
   text:string;
-  repos:Repo
+  repos:Repo[]
 
 //    newSearchClass = new SearchClass("","","","","","","");
 // @Output() addSearch = new EventEmitter<SearchClass>();

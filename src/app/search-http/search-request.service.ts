@@ -11,16 +11,16 @@ import { Repo } from '../repo';
 })
 export class SearchRequestService {
 
-  // searchClass:SearchClass;
+  
   users:User;
-  repos:Repo;
+  repos:Repo[];
   // reposs:any;
-  // login:any;
+  
 
   constructor(private http:HttpClient){
-// this.searchClass = new SearchClass("","","","","","","")
 this.users = new User("","","","","",new Date(),"","")
-this.repos = new Repo("","","",new Date())
+// this.repos = new Repo("","","",new Date())
+this.repos=[]
 
   } 
   searchRequest(profilo1){
@@ -64,40 +64,36 @@ this.repos = new Repo("","","",new Date())
   })
   return promise;
   }
-//   searchRequests(profilo1){
-//     interface ApiResponse{
-//       name:string;
-//       html_url:any;
-//       description: any  
-//       created_at:any; 
+  searchRequests(profilo1){
+    interface ApiResponse{
+      name:string;
+      html_url:any;
+      description: any  
+      created_at:any; 
       
 
-//     }
+    }
 
-//   let myPromise = new Promise((resolve,reject)=>{
-//     this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(getResponse=>{
-//       this.repos.name = getResponse.name
-//       this.repos.html_url = getResponse.html_url
-//       this.repos.description = getResponse.description
-//       this.repos.created_at = getResponse.created_at
-//       // this.reposs = getResponse;
+  let myPromise = new Promise((resolve,reject)=>{
+    this.http.get<ApiResponse>(environment.apiUrl).toPromise().then(getResponse=>{
+      for(var i in getResponse){
+      this.repos. push(getResponse[i]);
+    console.log(this.repos);
+      }
+      // this.reposs = getResponse;
       
-//       resolve()
-//     }),
-//     error=>{
-//       // this.reposs='error'
-//       this.repos.html_url = 'no repos number'
-//       this.repos.description= 'profile is not showing up'
-//       this.repos.created_at= 'hh'
+      resolve()
+    }),
+    error=>{
+      // this.reposs='error'
+
       
-//       reject(error)
-// }
+      reject(error)
+}
 
   
-// })
-// return myPromise;
-// }
-  // updateSearch(login:any){
-  //   this.login=login
-  // }
+})
+return myPromise;
+}
+
 }

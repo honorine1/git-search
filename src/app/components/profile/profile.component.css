@@ -1,0 +1,10 @@
+#imge{
+width:200px;
+height:200px;
+border-radius: 50%;
+padding-top:30px;
+}
+.container{
+    background-image:url("https://images.wallpaperscraft.com/image/background_abstraction_texture_86810_300x168.jpg");
+
+}
