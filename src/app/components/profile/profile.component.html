@@ -8,17 +8,64 @@
           <div class="col-md-4"></div>
           
        </div>
+       <div class="row">
+           <div class="col-md-2"></div>
+           <div class="col-md-5">
+            <h3>Github username:</h3>
+           </div>
+           <div class="col-md-3"><strong>{{users.login}}</strong></div>
+           <div class="col-md-2"></div>
+       </div>
+       <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+             <h3>Repositories Number:</h3>
+            </div>
+            <div class="col-md-3"><strong>{{users.public_repos}}</strong></div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-5">
+                 <h3>Github name:</h3>
+                </div>
+                <div class="col-md-3"><strong>{{users.name}}</strong></div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                     <h3>link to your repository</h3>
+                    </div>
+                    <div class="col-md-3"><strong><a href="{{users.html_url}}">repositories</a></strong></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-5">
+                         <h3>Followings:</h3>
+                        </div>
+                        <div class="col-md-3"><strong>{{users.following}}</strong></div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-5">
+                             <h3>followers:</h3>
+                            </div>
+                            <div class="col-md-3"><strong>{{users.followers}}</strong></div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                 <h3>created at:</h3>
+                                </div>
+                                <div class="col-md-3"><strong>{{users.created_at|date}}</strong></div>
+                                <div class="col-md-2"></div>
+                            </div>
+                    
    </div> 
-<ul >
-    <!-- <li><h5>your github profile</h5><img src="{{users.avatar_url}}" > </li> -->
-    <li ><h5>your github username:</h5>{{users.login}}</li>
-    <li><h5>number of your repositories:</h5>{{users.public_repos}}</li> 
-    <li><h5>your github name:</h5>{{users.name}}</li>
-    <li><h5>link to your repo:</h5><a href="{{users.html_url}}">repositories</a></li>
-    <li><h5>following:</h5>{{users.following}}</li>
-    <li><h5>followers</h5>{{users.followers}}</li>
-    <li><h5>created at:{{users.created_at|date}}</h5></li>
-</ul>
 
 <div *ngFor="let repo of repos">
     <p>{{repo.name}}</p>
