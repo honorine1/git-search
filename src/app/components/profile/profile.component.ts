@@ -18,18 +18,9 @@ export class ProfileComponent implements OnInit {
   // login:any;
 
   constructor(private searchService:SearchRequestService,private activatedRoute:ActivatedRoute) { 
-    // findProfile() {
-    //   this.searchClass.updateProfile(this.login);
-    //   this.searchClass.getProfileInfo().subscribe(profile => {
-    //     console.log(profile);
-    //     this.profile = profile;
-    //   });
+    
   }
-  // findProfile(){
-  //    this.searchService.updateSearch(this.login)
-  // }
-
- 
+  
   ngOnInit() {
     //for user
     // this.searchService.searchRequests();

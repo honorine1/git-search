@@ -81,19 +81,13 @@ this.repos=[]
     console.log(this.repos);
       }
       // this.reposs = getResponse;
-      
       resolve()
     }),
     error=>{
       // this.reposs='error'
-
-      
-      reject(error)
+reject(error)
 }
-
-  
 })
 return myPromise;
 }
-
 }
