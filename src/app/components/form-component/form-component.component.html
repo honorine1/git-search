@@ -1,17 +1,16 @@
-<!-- <p>Please enter your github username</p> -->
-<!-- 
-  <div id="form">
-<form class="form-inline" action="/action_page.php">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="text"  [(ngModel)]="text">
-    
-  </form>
-  <button class="btn btn-success" type="submit" (click)="submitForm()">Search</button>
-</div> -->
-<div class="form-group" id="form">
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="form-group" id="form">
     <form >
       <input type="text" class="form-control"  id="text" name="text"[(ngModel)]="text"placeholder="enter github username">
     </form>
-    <button class="btn btn-success" type="submit" (click)="submitForm()">Search</button>
+    <button class="btn btn-success" type="submit" id="submit" (click)="submitForm()">Search</button>
 </div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
   
 
