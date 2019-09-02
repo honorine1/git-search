@@ -64,11 +64,29 @@
                                 <div class="col-md-3"><strong>{{users.created_at|date}}</strong></div>
                                 <div class="col-md-2"></div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <h4>Your Public repositories</h4>
+                                </div>
+                                <div class="md-4"></div>
+
+                            </div>
+                            <div class="row">
+                            <div class="col-md-12">
+                                    <div *ngFor="let repo of repos">
+                                            <p>{{repo.name}}</p>
+                                            <p>{{repo.html_url}}</p>
+                                            <p>{{repo.description}}</p>
+                                            
+                                        </div> 
+                            </div>
+                            </div>
                             <div class="footer">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
-                                            <a href="face" target="_blank"> UWURUKUNDO Honorine</a>
+                                            <a href="https://www.facebook.com/profile.php?id=100011500754732" target="_blank"> UWURUKUNDO Honorine</a>
                                         </div>
                                     </div>
                                 </div>
@@ -76,12 +94,12 @@
                     
    </div> 
 
-<div *ngFor="let repo of repos">
+<!-- <div *ngFor="let repo of repos">
     <p>{{repo.name}}</p>
     <p>{{repo.html_url}}</p>
     <p>{{repo.description}}</p>
     
-</div>
+</div> -->
 <!-- <li><form action="">
         <div class="form-group">
             <input type="text" style="margin-top: 7%;  width: 130%; height: 15%;
