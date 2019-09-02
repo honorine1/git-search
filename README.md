@@ -11,7 +11,7 @@ This website is designed for users to search the github repositories and its rel
 
 ### Set Instruction
 
-open up our webpage:https://github.com/honorine1/git-search
+open up our webpage:https://honorine1.github.io/git-search/
 
 ### Technology used
 
