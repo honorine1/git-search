@@ -1,18 +1,26 @@
-<div class="container">
-    <div class="header">
-        <div class="navbar panel"><input type="text" name="login"><button>search</button></div>
-    </div>
-</div>
-    
+
+   <div class="container">
+       <div class="row">
+           
+       </div>
+   </div> 
 <ul >
-    <li><h5>your github profile</h5><img src="{{searchClass.avatar_url}}" > </li>
-    <li ><h5>your github username:</h5>{{searchClass.login}}</li>
-    <li><h5>number of your repositories:</h5>{{searchClass.public_repos}}</li>
-    <li><h5>your github name:</h5>{{searchClass.name}}</li>
-    <li><h5>link to your repo:</h5><a href="{{searchClass.html_url}}">repositories</a></li>
-    <li><h5>following:</h5>{{searchClass.following}}</li>
-    <li><h5>followers</h5>{{searchClass.followers}}</li>
+    <li><h5>your github profile</h5><img src="{{users.avatar_url}}" > </li>
+    <li ><h5>your github username:</h5>{{users.login}}</li>
+    <li><h5>number of your repositories:</h5>{{users.public_repos}}</li>
+    <li><h5>your github name:</h5>{{users.name}}</li>
+    <li><h5>link to your repo:</h5><a href="{{users.html_url}}">repositories</a></li>
+    <li><h5>following:</h5>{{users.following}}</li>
+    <li><h5>followers</h5>{{users.followers}}</li>
+    <li><h5>created at:{{users.created_at|date}}</h5></li>
 </ul>
+
+<!-- <div *ngFor=  "let repo of searchService.reposs">
+    <p>{{repo.name}}</p>
+    <p>{{repo.html_url}}</p>
+    <p>{{repo.description}}</p>
+    
+</div> -->
 <!-- <li><form action="">
         <div class="form-group">
             <input type="text" style="margin-top: 7%;  width: 130%; height: 15%;

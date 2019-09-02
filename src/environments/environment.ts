@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:"https://api.github.com/users/honorine1?access_token=11b1a594062d25464d63e8f2367d9a4fe0fc3cea"
+  apiUrl:"11b1a594062d25464d63e8f2367d9a4fe0fc3cea"
   
 };
 

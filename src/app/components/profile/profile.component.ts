@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { SearchRequestService } from '../../search-http/search-request.service';
-import { SearchClass } from 'src/app/search-class';
-
+import { User } from 'src/app/user';
+import { Repo } from 'src/app/repo';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -12,10 +12,12 @@ import { SearchClass } from 'src/app/search-class';
 })
 export class ProfileComponent implements OnInit {
  
-  searchClass:SearchClass;
-  login:any;
+  // searchClass:SearchClass;
+  users:User;
+  repos:Repo;
+  // login:any;
 
-  constructor(private searchService:SearchRequestService) { 
+  constructor(private searchService:SearchRequestService,private activatedRoute:ActivatedRoute) { 
     // findProfile() {
     //   this.searchClass.updateProfile(this.login);
     //   this.searchClass.getProfileInfo().subscribe(profile => {
@@ -29,9 +31,16 @@ export class ProfileComponent implements OnInit {
 
  
   ngOnInit() {
-    this.searchService.searchRequest();
-    this.searchClass = this.searchService.searchClass;
-    
+    //for user
+    // this.searchService.searchRequests();
+    this.users = this.searchService.users;
+    //for repos
+// this.searchService.searchRequests();
+    this.repos = this.searchService.repos;
+    // for repos
+    let profilo=this.activatedRoute.snapshot.paramMap.get('profilo')
+    this.searchService.searchRequest(profilo)
+    this.repos = this.searchService.repos
   }
 
 }
